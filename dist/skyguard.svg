@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 28 27.984853"
+   x="0px"
+   y="0px"
+   version="1.1"
+   id="svg3"
+   sodipodi:docname="skyguard.svg"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
+   width="28"
+   height="27.984854"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs3" />
+  <sodipodi:namedview
+     id="namedview3"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="8.9979338"
+     inkscape:cx="15.225718"
+     inkscape:cy="23.39426"
+     inkscape:window-width="1366"
+     inkscape:window-height="705"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg3" />
+  <path
+     d="M 13.366284,25.98076 A 12,12 0 0 1 7.9862843,3.6007604 v 3.38 a 3,3 0 0 0 2.9999997,3 1,1 0 0 1 0,1.9999996 4,4 0 0 0 -1.2199997,7.8 0.79,0.79 0 0 0 0.2999997,0.05 1.0111874,1.0111874 0 0 0 0.3,-2 2,2 0 0 1 -1.3799997,-1.85 2,2 0 0 1 1.9999997,-2 3,3 0 0 0 0,-5.9999996 1,1 0 0 1 -0.9999997,-1 v -4.3 a 11.8,11.8 0 0 1 3.9999997,-0.7 v 2 a 4,4 0 0 0 4,4 2,2 0 0 1 2,2 4,4 0 0 0 0.4,1.7299996 1,1 0 0 0 0.9,0.56 1,1 0 0 0 0.44,-0.1 1,1 0 0 0 0.46,-1.34 2,2 0 0 1 -0.2,-0.8499996 4,4 0 0 0 -4,-4 2,2 0 0 1 -2,-2 v -1.82 a 12,12 0 0 1 9.82,9.8199996 h -1.18 a 1,1 0 0 0 0,2 h 1.36 a 11.81,11.81 0 0 1 -0.1,1.54 1.0084146,1.0084146 0 0 0 2,0.26 14,14 0 1 0 -14.62,12.2 h 0.05 a 1.0003125,1.0003125 0 0 0 0.05,-2 z"
+     id="path1"
+     style="fill:#ffe6d5" />
+  <path
+     d="m 24.256284,22.84076 a 5.9,5.9 0 0 0 0.73,-2.86 6,6 0 1 0 -2,4.44 l 3.27,3.27 a 1.0040916,1.0040916 0 0 0 1.42,-1.42 z m -5.27,1.14 a 4,4 0 1 1 4,-4 4,4 0 0 1 -4,4 z"
+     id="path2"
+     style="fill:#f9f9f9" />
+</svg>
