@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import ReactDOM from 'react-dom/client'
-import { createBrowserRouter, HashRouter, RouterProvider, useNavigate, Routes, Route } from 'react-router-dom'
+import { HashRouter, useNavigate, Routes, Route } from 'react-router-dom'
 import { OpenStreetMapProvider } from "leaflet-geosearch";
 
 import { Home } from './home'
@@ -143,18 +143,6 @@ const styles = {
     }
 }
 
-const router = createBrowserRouter([
-    {
-        path: '/',
-        element: <App />,
-        errorElement: <ErrorPage />
-    },
-    {
-        path: '/search',
-        element: <Home />
-    }
-])
-
 function App(){
     return (
         <HashRouter>
@@ -168,7 +156,6 @@ function App(){
 
 ReactDOM.createRoot(document.getElementById('root')).render(
     <React.StrictMode>
-        {/* <RouterProvider router={router} /> */}
         <App />
     </React.StrictMode>,
 )
