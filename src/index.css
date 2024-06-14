@@ -1,0 +1,47 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  height: 100vh;
+  overflow-y: hidden;
+}
+
+#results-button:hover {
+  background-color: gray;
+}
+
+.leaflet-container {
+  margin-top: 3.5rem;
+  height: 100vh;
+}
+
+@media (width >= 768px) {
+    
+    #form-container {
+        width: 60%;
+    }
+
+    #text-container {
+        width: 60%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #results-container {
+      width: 60%;
+    }
+
+    #results-button {
+      background-color: aquamarine;
+      border-radius: 5;
+    }
+}
