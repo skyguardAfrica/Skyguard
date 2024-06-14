@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import ReactDOM from 'react-dom/client'
-import { createBrowserRouter, RouterProvider, useNavigate } from 'react-router-dom'
+import { createBrowserRouter, HashRouter, RouterProvider, useNavigate, Routes, Route } from 'react-router-dom'
 import { OpenStreetMapProvider } from "leaflet-geosearch";
 
 import { Home } from './home'
@@ -26,7 +26,7 @@ function LocationButton ({element}) {
     )
 }
 
-function App() {
+function Main() {
     const [searchInput, setSearchInput] = useState('')
     const [searchResults, setSearchResults] = useState('')
     const [element, setElement] = useState(null)
@@ -155,9 +155,21 @@ const router = createBrowserRouter([
     }
 ])
 
+function App(){
+    return (
+        <HashRouter>
+            <Routes>
+                <Route path='/' element={<Main />} />
+                <Route path='/search' element={<Home />} />
+            </Routes>
+        </HashRouter>
+    )
+}
+
 ReactDOM.createRoot(document.getElementById('root')).render(
     <React.StrictMode>
-        <RouterProvider router={router} />
+        {/* <RouterProvider router={router} /> */}
+        <App />
     </React.StrictMode>,
 )
 
