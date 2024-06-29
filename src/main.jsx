@@ -48,7 +48,9 @@ function Main() {
         setSearchInput(change.target.value)
         if (searchInput !== '') {
             provider.search({query: searchInput}).then(results => {
-                if (results.length > 5) 
+                if (results.length == 0) {
+                    return
+                } else if (results.length > 5) 
                     results = results.slice(0, 4)
                 setElement(results[0])
                 const output = 
