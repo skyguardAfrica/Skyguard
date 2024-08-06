@@ -30,6 +30,7 @@ const styles = {
         top: 0,
         left: 0,
         backgroundColor: '#07023b',
+        zIndex: 1,
     },
     nav: {
         display: 'flex',
