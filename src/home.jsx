@@ -12,19 +12,21 @@ import { AirspaceBuffer } from './airspaces/airspaces'
 import { NavBar } from './navigation/nav'
 
 export function Home() {
-  const {state} = useLocation()
-  const element = state
-  const position = [element.y, element.x]
-  // const position = [1.063861111111111, 38.66755555555555]
+const {state} = useLocation()
+const element = state
+const position = [element.y, element.x]
+// const position = [1.063861111111111, 38.66755555555555]
 
-  function marker(airport, latlng){
+function marker(airport, latlng){
     return L.circleMarker(latlng, geojsonMarkerOptions)
-  }
+}
 
-  return (
-      <div>
-          <NavBar />
-          <div>
+return (
+    <div style={styles.container}>
+        <div style={styles.nav}>
+            <NavBar />
+        </div>
+        <div style={styles.body}>
                 <MapContainer center={position} zoom={13} minZoom={7}>
                     <TileLayer
                         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -36,18 +38,33 @@ export function Home() {
                     <AirportMarker airports={airports}/>
                     <AirspaceBuffer airspace={airspace}/> 
                 </MapContainer>
-          </div>
-      </div>
+        </div>
+    </div>
 )
 }
 
 const geojsonMarkerOptions = {
-  radius: 4,
-  fillColor: "#ff7800",
-  color: "#000",
-  weight: 1,
-  opacity: 0.1,
-  fillOpacity: 0.8
+radius: 4,
+fillColor: "#ff7800",
+color: "#000",
+weight: 1,
+opacity: 0.1,
+fillOpacity: 0.8
 };
 
-
+const styles = {
+    container: {
+        width: '100%',
+        height: '100%',
+    }, 
+    nav: {
+        position: 'fixed',
+        width: '100%',
+        height: '3.5rem',
+        top: 0,
+        left: 0,
+    },
+    body: {
+        top: '3.5rem',
+    }
+}
