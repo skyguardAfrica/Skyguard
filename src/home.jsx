@@ -28,9 +28,15 @@ return (
         </div>
         <div style={styles.body}>
                 <MapContainer center={position} zoom={13} minZoom={7}>
+                <TileLayer
+                        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                        url="https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}"
+                    />
+
                     <TileLayer
                         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-                        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                        url="https://tile.openstreetmap.org/{z}/{x}/{y}.png"
+                        opacity={0.5}
                     />
                     <Marker position={position}> 
                         <Popup> {element.label} </Popup>
