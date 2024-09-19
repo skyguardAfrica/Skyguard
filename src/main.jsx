@@ -75,7 +75,7 @@ function Main() {
                 <form style={styles.form} id='form'>
                     <input 
                         name="query" 
-                        placeholder='Where do you want to fly'
+                        placeholder='Which road do you want map'
                         onChange={handleChange}
                         value={searchInput}
                         size={'100vh'}

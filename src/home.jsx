@@ -1,14 +1,9 @@
 import React from 'react'
-import { MapContainer, Marker, Popup, TileLayer } from 'react-leaflet'
-import L from 'leaflet'
+import { MapContainer, TileLayer } from 'react-leaflet'
 import { useLocation } from 'react-router-dom'
 
 import './index.css'
 import 'leaflet/dist/leaflet.css'
-import airports from './data/Airports.json'
-import airspace from './data/Airspace.json'
-import { AirportMarker } from './airports/airports'
-import { AirspaceBuffer } from './airspaces/airspaces'
 import { NavBar } from './navigation/nav'
 
 export function Home() {
@@ -17,14 +12,6 @@ export function Home() {
   const position = [element.y, element.x]
   // const position = [1.063861111111111, 38.66755555555555]
 
-  function marker(airport, latlng){
-    return L.circleMarker(latlng, geojsonMarkerOptions)
-  }
-
-  var OpenTopoMap = L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
-    maxZoom: 17,
-    attribution: 'Map data: &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, <a href="http://viewfinderpanoramas.org">SRTM</a> | Map style: &copy; <a href="https://opentopomap.org">OpenTopoMap</a> (<a href="https://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA</a>)'
-  });
   return (
       <div>
           <NavBar />
@@ -38,26 +25,12 @@ export function Home() {
                     <TileLayer
                         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                         url="https://tile.openstreetmap.org/{z}/{x}/{y}.png"
-                        opacity={0.3}
+                        opacity={0.5}
                     />
-                    {/* <Marker position={position}> 
-                        <Popup> {element.label} </Popup>
-                    </Marker>
-                    <AirportMarker airports={airports}/>
-                    <AirspaceBuffer airspace={airspace}/>  */}
                 </MapContainer>
           </div>
       </div>
 )
 }
-
-const geojsonMarkerOptions = {
-  radius: 4,
-  fillColor: "#ff7800",
-  color: "#000",
-  weight: 1,
-  opacity: 0.1,
-  fillOpacity: 0.8
-};
 
 
